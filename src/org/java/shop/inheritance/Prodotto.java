@@ -24,20 +24,24 @@ public class Prodotto {
 
     // CAMPI
     private int code;
+    private String name;
     private String brand;
-    private BigDecimal price;
-    private BigDecimal iva;
+    private double price;
+    private double iva;
 
 
 
     // COSTRUTTORI
 
-    public Prodotto(int code, String brand, BigDecimal price, BigDecimal iva) {
+    public Prodotto(int code, String name, String brand, double price, double iva) {
         this.code = code;
+        this.name = name;
         this.brand = brand;
         this.price = price;
         this.iva = iva;
     }
+
+
 
 
     // GETTER E SETTER
@@ -54,38 +58,37 @@ public class Prodotto {
         this.brand = brand;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public BigDecimal getIva() {
+    public double getIva() {
         return iva;
     }
 
-    public void setIva(BigDecimal iva) {
+    public void setIva(double iva) {
         this.iva = iva;
     }
 
 
     // METODI
-    public BigDecimal basicPrice(){
+    public double basicPrice(){
         return  price;
     }
 
-    public BigDecimal priceWithIva(){
-        BigDecimal ivaOnPrice = price.multiply(iva);
-        BigDecimal finalPrice = price.add(ivaOnPrice);
-        return finalPrice;
+    public double priceWithIva(){
+       return price + (price * iva/100);
     }
 
     @Override
     public String toString() {
         return "Prodotto{" +
                 "code=" + code +
+                ", name='" + name + '\'' +
                 ", brand='" + brand + '\'' +
                 ", price=" + price +
                 ", iva=" + iva +

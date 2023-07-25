@@ -14,11 +14,13 @@ public class Televisori extends Prodotto{
 
 
     // COSTRUTTORI
-    public Televisori(int code, String brand, BigDecimal price, BigDecimal iva) {
-        super(code, brand, price, iva);
+    public Televisori(int code, String name, String brand, double price, double iva, boolean smart, int dimensioni) {
+        super(code, name, brand, price, iva);
         this.dimensioni = dimensioni;
         this.smart = smart;
     }
+
+
 
 
     // GETTER E SETTER

@@ -14,11 +14,13 @@ public class Cuffie extends Prodotto{
 
 
     // COSTRUTTORI
-    public Cuffie(int code, String brand, BigDecimal price, BigDecimal iva) {
-        super(code, brand, price, iva);
+    public Cuffie(int code, String name, String brand, double price, double iva, String colore, boolean wireless) {
+        super(code, name, brand, price, iva);
         this.colore = colore;
         this.wireless = wireless;
     }
+
+
 
 
     // GETTER E SETTER

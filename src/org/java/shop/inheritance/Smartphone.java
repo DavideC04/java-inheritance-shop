@@ -16,11 +16,13 @@ public class Smartphone extends Prodotto{
 
 
     // COSTRUTTORI
-    public Smartphone(int code, String brand, BigDecimal price, BigDecimal iva) {
-        super(code, brand, price, iva);
+    public Smartphone(int code, String name, String brand, double price, double iva, String imei, int memoria) {
+        super(code, name, brand, price, iva);
         this.imei = imei;
         this.memoria = memoria;
     }
+
+
 
 
     // GETTER E SETTER
